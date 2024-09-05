@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="journal"
+            type="com.nazma_humayra.firebase_journal_app.Journal" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#EBD2CD"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Top section with username and share button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <!-- Username -->
+                <TextView
+                    android:id="@+id/journal_row_username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@{journal.username}"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <!-- Share Button -->
+                <ImageButton
+                    android:id="@+id/journal_row_share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:src="?attr/actionModeShareDrawable"
+                    android:contentDescription="Share"
+                    android:shadowColor="@color/black"/>
+
+                <!-- Bookmark Button -->
+                <ImageButton
+                    android:id="@+id/journal_row_bookmark_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_bookmark_border"
+                    android:contentDescription="Bookmark" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:background="#C3B6B6"
+             />
+            <ImageView
+                android:id="@+id/journal_image_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{journal.imageUrls.isEmpty() ? null : journal.imageUrls.get(0)}"
+                app:imageVisibility="@{!journal.imageUrls.isEmpty()}" />
+
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/journal_title_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="@{journal.title}"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Thoughts -->
+            <TextView
+                android:id="@+id/journal_thought_list"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp"
+                android:text="@{journal.thoughts}"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:background="#C3B6B6"
+                />
+            <!-- Timestamp and Overflow Menu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+<ImageView
+    android:layout_width="30dp"
+    android:layout_height="40dp"
+    android:src="@drawable/time_calnedar"
+    />
+                <!-- Timestamp -->
+                <TextView
+                    android:id="@+id/journal_timestamp_list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:formattedTimestamp="@{journal.timeAdded}"
+                    android:textColor="#2D464C"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Overflow Menu (3 dot button) -->
+                <ImageView
+                    android:id="@+id/journal_row_more_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="More Options"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_more_vert" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

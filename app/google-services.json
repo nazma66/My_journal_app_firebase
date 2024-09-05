@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "74436628215",
+    "project_id": "journalkotlin0",
+    "storage_bucket": "journalkotlin0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74436628215:android:f1f3888ea13a6acbac4df2",
+        "android_client_info": {
+          "package_name": "com.nazma_humayra.firebase_journal_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm0dznLcxHfDuiSNFlR082AR3-1X9TZv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

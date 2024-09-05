@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="teal_200">#0C510F</color>
+    <color name="teal_700">#217324</color>
+    <color name="colorAccent">#E68AF6</color>
+    <color name="colorPrimary">#1F5321</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="holo_green_dark">#509C53</color>
+    <color name="primaryColor">#B68FED</color>
+    <color name="primaryDarkColor">#4C9E50</color>
+    <color name="accentColor">#79918F</color>
+    <color name="editTextBackground">#EBD2CD</color>
+    <color name="editTextBorder">#083C0B</color>
+    <color name="editTextHint">#9E9E9E</color>
+    <color name="green">#4CAF50</color> <!-- Your primary green color -->
+    <color name="gray">#757575</color>
+
+
+</resources>

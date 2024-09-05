@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#596B8F">
+
+    <!-- Header Text Centered at the Top -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Being Positive"
+        android:textStyle="italic"
+        android:textColor="#EAD1CC"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ivImage" />
+
+    <!-- Image Below Header -->
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="304dp"
+        android:layout_height="289dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/img_1"
+        app:layout_constraintBottom_toTopOf="@+id/tvMainTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+    <!-- Main Title -->
+    <TextView
+        android:id="@+id/tvMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+    android:gravity="center"
+        android:textStyle="bold"
+    android:text="Welcome to My Journal"
+    android:textColor="#EBD2CD"
+    android:textSize="24sp"
+    app:layout_constraintTop_toBottomOf="@+id/ivImage"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/tvSubtitle" />
+
+    <!-- Subtitle Text -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+    android:gravity="center"
+    android:text="Keeping a log of what you are thankful for.Capture your journey, one story at a time.Record the moments that shape your life."
+    android:textColor="#FFFEFE"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@+id/btnGetStarted"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvMainTitle" />
+
+    <!-- Already Have an Account -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGetStarted"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#EBD2CD"
+        android:text="Get Started"
+        android:textColor="#596B8E"
+        android:textSize="18sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvLogin"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#EBD2CD"
+        android:text="Log in"
+        android:textColor="#596B8E"
+        android:textSize="18sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetStarted" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
